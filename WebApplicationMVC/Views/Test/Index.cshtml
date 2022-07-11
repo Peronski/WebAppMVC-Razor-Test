@@ -1,0 +1,13 @@
+﻿@model List<TestViewModel>
+@{
+    ViewData["Title"] = "Aphorism";
+}
+
+<div>
+    <ul>
+    @foreach(var test in Model)
+    {
+        <h1>@test.Text</h1>
+    }
+    </ul>
+</div>

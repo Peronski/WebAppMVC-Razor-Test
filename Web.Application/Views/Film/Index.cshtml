@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Test_Cinema.Models.Film>
+@{
+    ViewBag["Title"] = "Films";
+}
+
+<div class="text-center">
+    <h1 class="display-4">FILMS</h1>
+    <ul>
+    @foreach(Test_Cinema.Models.Film film in @Model)
+    {
+        <li>@film.Titolo</li>
+        <li>@film.Autore</li>
+        <li>@film.Genere</li>
+        <li>@film.Produttore</li>
+        <li>@film.Durata</li>
+    }
+    </ul>
+</div>

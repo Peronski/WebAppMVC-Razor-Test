@@ -1,0 +1,22 @@
+﻿@page
+@model Web.Application.Pages.Films.FilmsModel
+@*{
+    ViewBag["Title"] = "Films at Cinema"; // why error?
+@**@
+
+<div class="text-center">
+    <h1 class="display-4">All Films At Cinema Tonight</h1>
+    <ul>
+        <h2>Films:</h2>
+    @foreach(Test_Cinema.Models.Film film in Model.FilmList)
+    {
+        <li>
+        <h4>Titolo: @film.Titolo</h4>
+        <h4>Autore: @film.Autore</h4>
+        <h4>Genere: @film.Genere</h4>
+        <h4>Produttore: @film.Produttore</h4>
+        <h4>Durata: @film.Durata</h4>
+        </li>
+    }
+    </ul>
+</div>

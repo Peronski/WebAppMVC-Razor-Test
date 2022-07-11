@@ -1,0 +1,22 @@
+﻿@model TestViewModel
+<h1>Insert your favorite aphorism.</h1>
+
+<div>
+    <label class="form-label">Asphorism</label>
+    <form asp-controller="Test" asp-action="CreateAphorism" method="post">
+        @*
+        [form asp-controller] To access controller
+        [asp-action] To call method on controller 
+        [method] To specify how send form-data (url variables or http post-transaction)
+
+        Url variables are sent in url so its visible to everyone
+        Http post-transaction are sent in hyper text file so are not visible
+        *@
+        <input asp-for="Text" type="text" class="form-control" />
+        @*
+        [input asp-for] To fill relative members of Model 
+        [type] Type of content will be required and inserted in model
+        *@
+        <button type="submit" class="btn-primary">SAVE</button>
+    </form>
+</div>
